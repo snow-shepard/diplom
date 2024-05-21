@@ -1,9 +1,15 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
+
+from .models import *
 
 
 def index(request):
-    return HttpResponse('СТ 1')
+    posts = News.objects.all()
+    return render(request, 'insurance/index.html', {'posts':posts, 'title': 'ГС'})
+
+def osago(request):
+    return render(request, 'insurance/osago.html', {'title': 'ОСАГО'})
 
 def categories(request, cat):
     if(request.POST):
@@ -13,7 +19,7 @@ def categories(request, cat):
 
 def archive(request, year):
     if int(year) > 2020:
-        a = redirect('home', permanent=True)
+        a = redirect('/', permanent=True)
         return a
     return HttpResponse(f'<h1>Архиве</h1><p>{year}</p>')
 

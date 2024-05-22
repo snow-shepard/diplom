@@ -1,32 +1,65 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'insurance/css/styles.css' %}">
+    <title>Insurance Assistance</title>
 </head>
 <body>
-    {% block mainmenu %}
-    <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Logo">
-            <span>INSURANCE assistance</span>
-        </div>
-        <ul class="nav">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Ипотека</a></li>
-            <li><a href="#">ОСАГО</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Вопросы и ответы</a></li>
-            <li><a href="#">Контакты</a></li>
-        </ul>
-        <div class="contact">
-            +7-938-1000-856
-        </div>
-    </header>
-    {% endblock mainmenu %}
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="{% static 'insurance/images/logo_b.png' %}" alt="Logo">
+                    <div class="logo-text-container">
+                        <span class="logo-text">INSURANCE</span>
+                        <span class="logo-subtext">assistance</span>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Ипотека</a></li>
+                    <li><a href="#">ОСАГО</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="contact">
+                    +7-938-1000-856
+                </div>
+            </div>
+        </header>
 
-    {% block content %}
-    {% endblock %}
+        <main class="container">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="{% static 'insurance/images/logo_w.png' %}" alt="Logo">
+                <div class="footer-logo-text">
+                    <span class="logo-text-footer">INSURANCE</span>
+                    <span class="logo-subtext-footer">assistance</span>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <span>+7-938-1000-856</span>
+                </div>
+                <div class="contact-item">
+                    <span>lp-lessor@mail.ru</span>
+                </div>
+                <div class="contact-icons">
+                    <img src="{% static 'insurance/images/wt.png' %}" alt="WhatsApp">
+                    <img src="{% static 'insurance/images/tg.png' %}" alt="Telegram">
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

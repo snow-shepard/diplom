@@ -11,6 +11,9 @@ def index(request):
 def osago(request):
     return render(request, 'insurance/osago.html', {'title': 'ОСАГО'})
 
+def isa(request):
+    return render(request, 'insurance/isa.html', {'title': 'ИС'})
+
 def categories(request, cat):
     if(request.POST):
         print(request.POST)

@@ -493,6 +493,7 @@ main {
     background-color: #f9f9f9;
     margin-top: 10px;
     display: none;
+    text-align: left;
 }
 .plus-icon {
     font-size: 24px;

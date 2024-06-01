@@ -34,49 +34,20 @@
     </div>
 </section>
 <section>
-<div class="faq-section">
-    <h2>Часто задаваемые вопросы</h2>
-    <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">
-            <span>Какие документы нужны для оформления полиса ОСАГО?</span>
-            <span class="plus-icon">+</span>
+    <div class="faq-section">
+        <h2>Часто задаваемые вопросы</h2>
+        {% for faq in faq_items %}
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>{{ faq.question }}</span>
+                <span class="plus-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>{{ faq.answer }}</p>
+            </div>
+            </div>
+            {% endfor %}
         </div>
-        <div class="faq-answer">
-            <p>Для оформления полиса ОСАГО необходимы следующие документы: паспорт, водительское удостоверение, свидетельство о регистрации транспортного средства (СТС), диагностическая карта (при наличии), предыдущий полис ОСАГО (если есть).</p>
-        </div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">
-            <span>Какие льготы полагаются по ОСАГО гражданам с ограниченными возможностями?</span>
-            <span class="plus-icon">+</span>
-        </div>
-        <div class="faq-answer">
-            <p>Граждане с ограниченными возможностями могут рассчитывать на льготы при оформлении полиса ОСАГО, включая скидки и возможность получения компенсаций от государства. Конкретные условия зависят от региона и страховой компании.</p>
-        </div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">
-            <span>Срок действия техосмотра (талона или диагностической карты) скоро заканчивается. Можно ли купить полис ОСАГО?</span>
-            <span class="plus-icon">+</span>
-        </div>
-        <div class="faq-answer">
-            <p>Полис ОСАГО можно оформить, если срок действия техосмотра заканчивается не ранее чем через 30 дней с момента заключения договора страхования. В противном случае необходимо пройти техосмотр и получить новую диагностическую карту.</p>
-        </div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">
-            <span>Сколько водителей можно вписать в полис ОСАГО?</span>
-            <span class="plus-icon">+</span>
-        </div>
-        <div class="faq-answer">
-            <p>В полис ОСАГО можно вписать неограниченное количество водителей. Важно, чтобы все указанные водители имели действующие водительские удостоверения. Полис с ограниченным списком водителей обычно дешевле, чем безлимитный.</p>
-        </div>
-    </div>
-    <div class="more-answers">
-        <a href="#">Ещё больше ответов</a>
-    </div>
-</div>
-<script src="{% static 'insurance/js/jss.js' %}"></script>
+    <script src="{% static 'insurance/js/jss.js' %}"></script>
 </section>
-
 {% endblock %}

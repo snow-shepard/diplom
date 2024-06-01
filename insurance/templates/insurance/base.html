@@ -20,11 +20,11 @@
                     </div>
                 </div>
                 <ul class="nav">
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Ипотека</a></li>
-                    <li><a href="#">ОСАГО</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="{% url 'isa' %}">Ипотека</a></li>
+                    <li><a href="{% url 'osago' %}">ОСАГО</a></li>
+                    <li><a href="{% url 'news_list' %}">Новости</a></li>
+                    <li><a href="{% url 'faq' %}">Вопросы и ответы</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
                 <div class="contact">

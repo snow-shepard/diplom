@@ -33,12 +33,12 @@
     <div class="service-options">
         <div class="service">
             <img src="{% static 'insurance/images/car.png' %}" alt="ОСАГО">
-            <h3>ОСАГО</h3>
+            <h3><a href="{% url 'osago' %}">ОСАГО</a></h3>
             <p>ОСАГО — обязательное автострахование гражданской ответственности, покрывающее ущерб третьим лицам.</p>
         </div>
         <div class="service">
             <img src="{% static 'insurance/images/home.png' %}" alt="Ипотечное страхование">
-            <h3>Ипотечное страхование</h3>
+            <h3><a href="{% url 'isa' %}">Ипотечное страхование</a></h3>
             <p>Ипотечное страхование — защита кредита от рисков утраты имущества и трудоспособности.</p>
         </div>
     </div>
@@ -52,12 +52,14 @@
                 <div class="news-date">{{ news.time_create|date:"d.m.Y" }}</div>
                 <div class="news-image">
                 </div>
-                <div class="news-title">{{ news.title }}</div>
+                <div class="news-title">
+                    <a href="{% url 'news_detail' news.pk %}">{{ news.title }}</a>
+                </div>
             </div>
         {% endfor %}
     </div>
     <div class="more-news">
-        <a href="#">Ещё больше новостей</a>
+        <a href="{% url 'news_list' %}">Ещё больше новостей</a>
     </div>
 {% endblock %}
 

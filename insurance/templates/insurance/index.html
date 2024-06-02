@@ -51,6 +51,7 @@
             <div class="news-item">
                 <div class="news-date">{{ news.time_create|date:"d.m.Y" }}</div>
                 <div class="news-image">
+                    <img src="{{ news.photo.url }}" alt="News Image"> 
                 </div>
                 <div class="news-title">
                     <a href="{% url 'news_detail' news.pk %}">{{ news.title }}</a>

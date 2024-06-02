@@ -295,7 +295,6 @@ main {
     border-radius: 8px;
     padding: 15px;
     transition: transform 0.3s;
-    
 }
 
 .news-item:hover {
@@ -307,23 +306,6 @@ main {
     color: #666;
     margin-bottom: 10px;
     text-align: left;
-}
-
-.news-image {
-    background-color: #e0e0e0;
-    
-    height: 200px;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.news-image::before {
-    content: "\1F4F0";
-    font-size: 48px;
-    color: #ccc;
 }
 
 .news-title {
@@ -338,6 +320,24 @@ main {
     color: #333;
 }
 
+.news-image {
+    background-color: #e0e0e0;
+    height: 200px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Скрываем излишек изображения */
+}
+
+.news-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
 .more-news {
     text-align: center;
     margin-top: 30px;
@@ -348,6 +348,29 @@ main {
     color: #007bff;
     font-size: 16px;
     font-weight: bold;
+}
+
+/* Media Queries */
+
+/* Large screens (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .news-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Medium screens (tablets, 768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .news-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small screens (phones, less than 768px) */
+@media (max-width: 767px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -582,4 +605,58 @@ main {
     .news-detail .news-image {
         height: 200px;
     }
+}
+
+.contact-page {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-page h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    overflow-x: auto; 
+    white-space: nowrap; 
+}
+
+.contact-items {
+    flex: 0 0 auto; 
+    min-width: 200px;
+    text-align: left; 
+}
+
+.contact-items span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-items small {
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-items a {
+    color: #0033cc;
+    text-decoration: none;
+}
+
+.contact-items a:hover {
+    text-decoration: underline;
 }

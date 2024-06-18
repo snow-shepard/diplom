@@ -5,7 +5,7 @@
 <section class="news-detail">
     <h1>{{ news.title }}</h1>
     <div class="news-image">
-        <!-- Image content or placeholder icon -->
+        <img src="{{ news.photo.url }}" alt="News Image">
     </div>
     <div class="news-date">{{ news.time_create|date:"d.m.Y" }}</div>
     <div class="news-content">{{ news.content }}</div>

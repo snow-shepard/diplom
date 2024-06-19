@@ -266,7 +266,13 @@ div {
     font-size: 12px;
     margin: 0;
     line-height: 20px;
+    
 }
+.footer-legal a{
+    text-decoration: none;
+    color: #fff;
+}
+
 main {
     flex: 1;
 }
@@ -328,7 +334,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Скрываем излишек изображения */
+    overflow: hidden; 
 }
 
 .news-image img {
@@ -350,23 +356,21 @@ main {
     font-weight: bold;
 }
 
-/* Media Queries */
 
-/* Large screens (desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .news-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Medium screens (tablets, 768px to 1199px) */
+
 @media (min-width: 768px) and (max-width: 1199px) {
     .news-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Small screens (phones, less than 768px) */
+
 @media (max-width: 767px) {
     .news-container {
         grid-template-columns: 1fr;
@@ -498,7 +502,7 @@ main {
 }
 
 .faq-item {
-    margin-bottom: 20px; /* Добавлен отступ между элементами */
+    margin-bottom: 20px; 
 }
 
 .faq-question {

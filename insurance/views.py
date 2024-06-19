@@ -41,6 +41,9 @@ def isf(request):
 def contacts(request):  
     return render(request, 'insurance/contacts.html', {'contacts': contacts, 'title': 'контакты'})
 
+def pss(request):  
+    return render(request, 'insurance/pss.html', {'pss': pss, 'title': 'политика'})
+
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Ст нот фанде</h1>')
 

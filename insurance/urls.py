@@ -13,4 +13,5 @@ urlpatterns = [
     path('osf/', views.osf, name='osf'),
     path('isf/', views.isf, name='isf'),
     path('contacts/', views.contacts, name='contacts'),
+    path('pss/', views.pss, name='pss'),
 ]
